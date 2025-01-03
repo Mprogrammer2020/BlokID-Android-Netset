@@ -14,7 +14,7 @@ class EventTracker(private val context: Context) {
             .getBoolean("is_installed", false)
         val properties = SDKUtils.getDeviceProperties(context).apply {
             put("event", EventType.FirstVisit)
-            put("site_identifier",siteIdentifier)
+            put("siteIdentifier",siteIdentifier)
         }
         if (!isInstalled) {
             ApiClient.sendEvent(properties, context,object : ApiCallback {
