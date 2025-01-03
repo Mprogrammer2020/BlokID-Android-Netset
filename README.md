@@ -1,5 +1,3 @@
-# BlokID-Android-Netset
-
 # BlokID Android SDK
 
 BlokID Android SDK allows developers to track events and collect user interaction data seamlessly. This document outlines the setup and usage instructions for integrating the SDK into your Android application.
@@ -36,7 +34,7 @@ dependencies {
 To use the SDK, initialize it in your application or activity:
 
 ```kotlin
-val sdkManager = SDKManager()
+val sdkManager = BlokSDKManager()
 sdkManager.initialize(context, "BLOKID-PIXEL-MOBILE")
 ```
 - **`context`**: Provide the application or activity context.
