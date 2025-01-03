@@ -3,7 +3,7 @@ package com.sdk.blokid.sdk_manager
 
 import android.content.Context
 
-class SDKManager {
+class BlokSDKManager {
     private lateinit var context: Context
     private lateinit var sessionManager: SessionManager
     private lateinit var eventTracker: EventTracker

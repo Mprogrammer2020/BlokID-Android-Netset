@@ -45,7 +45,7 @@ publishing {
             }
             groupId = "com.github.mprogrammer2020"
             artifactId = "BlokID"
-            version = "1.0"
+            version = "1.1"
 
             pom {
                 name.set("BlokID") // Replace with your SDK name
