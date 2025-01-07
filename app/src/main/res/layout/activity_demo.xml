@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DemoActivity">
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:text="Click Me"
+        android:id="@+id/clickDemo"/>
+<com.google.android.material.tabs.TabLayout
+    android:layout_width="match_parent"
+    android:layout_below="@id/clickDemo"
+    android:id="@+id/tabLaoyt"
+    android:layout_marginTop="20dp"
+    android:layout_height="wrap_content">
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:text="Home"
+        android:id="@+id/homeTab"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:text="Catalogue"
+        android:id="@+id/catalougeTab"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:text="Profile"
+        android:id="@+id/profileTab"
+        android:layout_height="wrap_content"/>
+
+</com.google.android.material.tabs.TabLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:id="@+id/recyclerView"
+        tools:listitem="@android:layout/list_content"
+        android:layout_below="@+id/tabLaoyt"/>
+</RelativeLayout>

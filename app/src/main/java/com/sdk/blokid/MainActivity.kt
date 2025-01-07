@@ -1,5 +1,6 @@
 package com.sdk.blokid
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -41,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<MaterialButton>(R.id.click).setOnClickListener {
             sdkManager?.trackTabSwitch()
+
+        }
+        findViewById<MaterialButton>(R.id.liveDemo).setOnClickListener {
+          startActivity(  Intent(this,DemoActivity::class.java))
 
         }
     }

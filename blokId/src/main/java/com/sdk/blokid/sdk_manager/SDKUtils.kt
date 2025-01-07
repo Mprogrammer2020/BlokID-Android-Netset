@@ -82,9 +82,6 @@ object SDKUtils {
             timeZone = TimeZone.getTimeZone("UTC")
         }.format(Date())
 
-        // Event
-//        properties["event"] = "TabSwitch" // Example event, update dynamically as needed
-
         return properties
     }
 }
