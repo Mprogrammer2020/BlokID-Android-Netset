@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.tabs.TabLayout
-import com.sdk.blokid.BlokIdDemoApplication.Companion.sdkManager
+import com.sdk.blokid.BlokIdDemoApplication.Companion.blokSDKManager
 
 class DemoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +24,7 @@ class DemoActivity : AppCompatActivity() {
         }
 
         findViewById<MaterialButton>(com.sdk.blokid.R.id.clickDemo).setOnClickListener {
-            sdkManager?.trackClick()
+            blokSDKManager?.trackClickBlokID()
 
         }
         val tabLayout: TabLayout = findViewById(R.id.tabLaoyt)
@@ -35,18 +35,18 @@ class DemoActivity : AppCompatActivity() {
                 // Called when a tab is selected
                 when (tab?.position) {
                     0 -> {
-                      sdkManager?.trackTabSwitch()
+                      blokSDKManager?.trackTabSwitchBlokID()
                         println("Home Tab Selected")
                     }
 
                     1 -> {
-                        sdkManager?.trackTabSwitch()
+                        blokSDKManager?.trackTabSwitchBlokID()
                         // Second tab selected (Catalogue)
                         println("Catalogue Tab Selected")
                     }
 
                     2 -> {
-                        sdkManager?.trackTabSwitch()
+                        blokSDKManager?.trackTabSwitchBlokID()
                         // Third tab selected (Profile)
                         println("Profile Tab Selected")
                     }
@@ -84,7 +84,7 @@ class DemoActivity : AppCompatActivity() {
                 if (newState == RecyclerView.SCROLL_STATE_IDLE) {
                     // Scrolling stopped
                     Log.d("ScrollTracking", "Scrolling stopped. Sending data to pixel server...")
-                    sdkManager?.trackScroll()
+                    blokSDKManager?.trackScrollBlokID()
                 }
             }
 
@@ -98,11 +98,11 @@ class DemoActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        sdkManager?.trackPageLoad()
+        blokSDKManager?.trackPageLoadBlokID()
     }
 
     override fun onPause() {
         super.onPause()
-        sdkManager?.trackPageUnLoad()
+        blokSDKManager?.trackPageUnLoadBlokID()
     }
 }

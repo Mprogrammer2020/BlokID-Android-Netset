@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
-import com.sdk.blokid.BlokIdDemoApplication.Companion.sdkManager
+import com.sdk.blokid.BlokIdDemoApplication.Companion.blokSDKManager
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,30 +21,36 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         findViewById<MaterialButton>(R.id.firstVisit).setOnClickListener {
-            sdkManager?.trackFirstVisitEvent()
+            blokSDKManager?.trackFirstVisitEventBlokID()
 
         }
         findViewById<MaterialButton>(R.id.scrollDetails).setOnClickListener {
-            sdkManager?.trackScroll()
+            blokSDKManager?.trackScrollBlokID()
         }
         findViewById<MaterialButton>(R.id.pageLoad).setOnClickListener {
-            sdkManager?.trackPageLoad()
+            blokSDKManager?.trackPageLoadBlokID()
         }
         findViewById<MaterialButton>(R.id.pageUnload).setOnClickListener {
-            sdkManager?.trackPageUnLoad()
+            blokSDKManager?.trackPageUnLoadBlokID()
         }
         findViewById<MaterialButton>(R.id.scrollDetails).setOnClickListener {
-            sdkManager?.trackScroll()
+            blokSDKManager?.trackScrollBlokID()
         }
         findViewById<MaterialButton>(R.id.tabSwitch).setOnClickListener {
-            sdkManager?.trackTabSwitch()
+            blokSDKManager?.trackTabSwitchBlokID()
 
         }
         findViewById<MaterialButton>(R.id.click).setOnClickListener {
-            sdkManager?.trackTabSwitch()
+            blokSDKManager?.trackClickBlokID()
+
+        }
+        findViewById<MaterialButton>(R.id.showUnityAd).setOnClickListener {
+            blokSDKManager?.trackClickBlokID()
+            blokSDKManager?.showUnityAd(this)
 
         }
         findViewById<MaterialButton>(R.id.liveDemo).setOnClickListener {
+            blokSDKManager?.trackClickBlokID()
           startActivity(  Intent(this,DemoActivity::class.java))
 
         }

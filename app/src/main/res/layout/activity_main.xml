@@ -7,56 +7,70 @@
     android:layout_height="match_parent"
     tools:context="com.sdk.blokid.MainActivity">
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="First Visit Event"
-            android:id="@+id/firstVisit"/>
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Scroll Event"
-            android:id="@+id/scrollDetails"/>
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Page Load Event"
-            android:id="@+id/pageLoad"/>
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Page Unload Event"
-            android:id="@+id/pageUnload"/>
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Tab Switch Event"
-            android:id="@+id/tabSwitch"/>
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Click Event"
-            android:id="@+id/click"/>
-        <TextView
+        android:layout_height="wrap_content">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_margin="10dp"
-            android:text="Click buttons to send the data to Pixel Server"
-            android:id="@+id/tvInstruction"/>
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Demo"
-            android:layout_marginTop="50dp"
-            android:backgroundTint="@color/black"
-            android:id="@+id/liveDemo"/>
-    </LinearLayout>
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="First Visit Event"
+                android:id="@+id/firstVisit"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Scroll Event"
+                android:id="@+id/scrollDetails"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Page Load Event"
+                android:id="@+id/pageLoad"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Page Unload Event"
+                android:id="@+id/pageUnload"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Tab Switch Event"
+                android:id="@+id/tabSwitch"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Click Event"
+                android:id="@+id/click"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Show Unity Ad"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:id="@+id/showUnityAd"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:text="Click buttons to send the data to Pixel Server"
+                android:id="@+id/tvInstruction"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Demo"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="@color/black"
+                android:id="@+id/liveDemo"/>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 
 </RelativeLayout>
