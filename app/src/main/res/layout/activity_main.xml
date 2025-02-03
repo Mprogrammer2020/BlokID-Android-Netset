@@ -54,6 +54,12 @@
                 android:text="Show Unity Ad"
                 android:backgroundTint="@android:color/holo_blue_light"
                 android:id="@+id/showUnityAd"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Show AppLovin Ad"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:id="@+id/showAppLovinAd"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

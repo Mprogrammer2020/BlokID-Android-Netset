@@ -17,6 +17,10 @@
         <meta-data
             android:name="com.unity3d.ads.metadata.UNITY_GAME_ID"
             android:value="5778541" />
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="05TMDQ5tZabpXQ45_UTbmEGNUtVAzSTzT6KmWQc5_CuWdzccS4DCITZoL3yIWUG3bbq60QC_d4WF28tUC4gVTF"/>
+
         <activity
             android:name=".DemoActivity"
             android:exported="false" />

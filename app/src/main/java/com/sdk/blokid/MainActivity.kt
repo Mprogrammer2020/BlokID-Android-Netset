@@ -49,6 +49,11 @@ class MainActivity : AppCompatActivity() {
             blokSDKManager?.showUnityAd(this)
 
         }
+        findViewById<MaterialButton>(R.id.showAppLovinAd).setOnClickListener {
+            blokSDKManager?.showAppLovinAd(this)
+            blokSDKManager?.trackClickBlokID()
+
+        }
         findViewById<MaterialButton>(R.id.liveDemo).setOnClickListener {
             blokSDKManager?.trackClickBlokID()
           startActivity(  Intent(this,DemoActivity::class.java))
