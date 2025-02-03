@@ -13,6 +13,7 @@ class BlokIdDemoApplication:Application() {
          blokSDKManager = BlokIDSDKManager()
         blokSDKManager?.initializeBlokIDSDK(this,"BLOKID-PIXEL-MOBILE")
         blokSDKManager?.initializeUnityAds("5778541","Interstitial_Android",true)
+        blokSDKManager?.initializeAppLovinAds()
 
     }
 }

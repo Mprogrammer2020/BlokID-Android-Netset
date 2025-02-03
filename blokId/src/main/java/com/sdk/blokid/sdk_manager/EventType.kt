@@ -9,7 +9,11 @@ enum class EventType(val eventName: String) {
     Click("Click"),
     Scroll("Scroll"),
     AppLovinAdClick("AppLovinAdClick"),
-    UnityAdClick("UnityAdClick");
+    AppLovinAdCompleted("AppLovinAdCompleted"),
+    AppLovinAdShow("AppLovinAdShow"),
+    UnityAdClick("UnityAdClick"),
+    UnityAdCompleted("UnityAdCompleted"),
+    UnityAdShow("UnityAdShow");
 
     override fun toString(): String {
         return eventName
